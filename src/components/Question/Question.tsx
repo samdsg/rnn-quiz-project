@@ -190,6 +190,7 @@ const Question = ({ navigation }: WelcomeProps) => {
                   bounces={false}
                   {...scrollHandler}
                   {...{ onMomentumScrollEnd, onMomentumScrollBegin }}
+                  pointerEvents="none"
                 >
                   {allQuestions.map(({ question }, index) => (
                     <Fragment key={index}>
