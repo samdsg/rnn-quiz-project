@@ -49,7 +49,8 @@ const FinishedAlert = ({
 
   useEffect(() => {
     calculaterScore();
-  }, []);
+    console.log(userAnswers)
+  }, [userAnswers]);
 
   return (
     <Animated.View
