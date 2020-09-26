@@ -112,18 +112,14 @@ const Question = ({ navigation }: WelcomeProps) => {
     }
   };
 
-  const gotoNextScroll = () => {
-    if (scroll.current) {
-      scroll.current.getNode().scrollTo({
-        x: width * curNum,
-        animated: true,
-      });
-    }
-  };
-
   useEffect(() => {
     if (!quizOver) {
-      gotoNextScroll();
+      if (scroll.current) {
+        scroll.current.getNode().scrollTo({
+          x: width * curNum,
+          animated: true,
+        });
+      }
     }
   }, [curNum]);
 
